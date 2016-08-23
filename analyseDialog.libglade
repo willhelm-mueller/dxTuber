@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<glade-interface>
+  <widget class="GtkWindow" id="analysePopup">
+    <child>
+      <widget class="GtkTable" id="table1">
+        <property name="visible">True</property>
+        <property name="n_rows">5</property>
+        <property name="n_columns">2</property>
+        <child>
+          <widget class="GtkRadioButton" id="analyseDiameterMaxRadio">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="label" translatable="yes">Diameter</property>
+            <property name="response_id">0</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <property name="group">analyseAreaRadio</property>
+          </widget>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">2</property>
+            <property name="top_attach">3</property>
+            <property name="bottom_attach">4</property>
+            <property name="y_options">GTK_EXPAND</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkRadioButton" id="analyseAreaRadio">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="label" translatable="yes">Area</property>
+            <property name="response_id">0</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <signal name="clicked" handler="ANALYSE_METHOD_0"/>
+          </widget>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">2</property>
+            <property name="top_attach">2</property>
+            <property name="bottom_attach">3</property>
+            <property name="y_options">GTK_EXPAND</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <widget class="GtkLabel" id="axisLabel">
+            <property name="visible">True</property>
+            <property name="xalign">0.039999999105930328</property>
+            <property name="label" translatable="yes">Axis</property>
+            <property name="justify">GTK_JUSTIFY_RIGHT</property>
+            <property name="wrap_mode">PANGO_WRAP_WORD_CHAR</property>
+            <property name="ellipsize">PANGO_ELLIPSIZE_START</property>
+          </widget>
+          <packing>
+            <property name="x_options">GTK_FILL</property>
+            <property name="y_options"></property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkLabel" id="groupLabel">
+            <property name="visible">True</property>
+            <property name="xalign">0.039999999105930328</property>
+            <property name="label" translatable="yes">Group</property>
+          </widget>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">2</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkRadioButton" id="xAxisRadioButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="label" translatable="yes">X-Axis</property>
+            <property name="response_id">0</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <signal name="clicked" handler="ANALYSE_X"/>
+          </widget>
+          <packing>
+            <property name="top_attach">1</property>
+            <property name="bottom_attach">2</property>
+            <property name="y_options">GTK_EXPAND</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkRadioButton" id="yAxisRadioButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="label" translatable="yes">Y-Axis</property>
+            <property name="response_id">0</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <property name="group">xAxisRadioButton</property>
+            <signal name="clicked" handler="ANALYSE_Y"/>
+          </widget>
+          <packing>
+            <property name="top_attach">2</property>
+            <property name="bottom_attach">3</property>
+            <property name="y_options">GTK_EXPAND</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkRadioButton" id="zAxisRadioButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="label" translatable="yes">Z-Axis</property>
+            <property name="response_id">0</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <property name="group">xAxisRadioButton</property>
+            <signal name="clicked" handler="ANALYSE_Z"/>
+          </widget>
+          <packing>
+            <property name="top_attach">3</property>
+            <property name="bottom_attach">4</property>
+            <property name="y_options">GTK_EXPAND</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="analyseButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="label" translatable="yes">Analyse</property>
+            <property name="response_id">0</property>
+            <signal name="clicked" handler="ANALYSE_TUBE_BUTTON_CLICKED"/>
+          </widget>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">2</property>
+            <property name="top_attach">4</property>
+            <property name="bottom_attach">5</property>
+            <property name="x_options">GTK_EXPAND</property>
+            <property name="y_options"></property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>

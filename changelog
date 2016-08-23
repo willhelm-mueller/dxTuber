@@ -1,0 +1,323 @@
+Changelog
+
+v0.27 7. Jan 2013
+
+#readPDB
+-Added error message for unsupported pdb files. Example header is now printed to CLI
+-bugfixes ... 
+
+------------
+
+v0.26 14. Dec 2012
+
+#dxTuber_cmd
+-bug /typo for 1D z scanning
+
+-------------
+
+
+v0.25 22. Oct. 2012
+
+#analysCavity (cmd)
+-bug in parameter check block 
+
+-------------
+
+
+v0.24 
+
+#analyzecavity 
+-bug: pore profiles start and end now with values of 0 
+-multiple zeros in one cavity are now supported AND listet in output files
+ usefull if disconnected cavites are in forus of a pore profile analysis
+
+
+-------------
+
+v0.23 20. Jun 2012
+
+#postgroup
++'core_cavities_after_filter.pdb' stores the grouped core cavities 
++distcutoff parameter can now be set via cmd
+
+-------------
+
+v0.22 21. Mar 2012
+
+#postgroup 
++user can now select either to postgroup ALL cavites or a single cavity
+ (If '--cid' statement is not given)
+-bugfixes
+
+--------------
+
+v0.2  21. Feb 2012
+
+#General
++pdb2dx: Converts previously previously via dxTuber created pdb files back into OpenDX file format. Usefull if cavites shall be represented as 'surface' in VMD
+
+#dxTuber_cmd
++supports now pdb(grid only) files as input
++fill after grouping (Experimental)
++minimum distance keep (mdk) applies an minimum distance filter and stores filtered ISV's separately for grouping // dirty dirty dirty ... 
++overlap option, switches if a ISV will be stored during scanning if a protein > protMinDens is located at the very same coordinates. 
+
+#scanning / planesearch
++'--mdk' minimum distance keep, new idea to separate cavites inside water water clusters. 
+-storeOverLappingISV = False    <--- switches if ISV will be deleted if a protein Voxels > protMinDens is located at the very same position 
+
+#writepdb
+-ungrouped cavities now have the (atom)id '0' instead of 'DEN' -> ungrouped cavities can be processed via analyzeCavity.py | dxTuber_gui
+-99999'er atom counter bug m(  // for some unknown reason code was commented out... "gremlins"?
+-densities up to 999999 can now be stored in pdb files 
+
+#filter
++filterByDens: filters by voxel density values 
++deleteRectangleInside: deletes voxles inside the defined rectangle  //Experimental not yet testet
+
+#readPDB
+-bugfixes, lots of... do not parse pdb files by column in future *GRML*
+
+#postgroup
++detected cavities can now be devided into subcavities with postgroupcavities.py 
+
+
+----------------
+
+v0.11 12. August 2011
+
+#General
++analyzeCavity.py
+ -cmd version of the analyze cavity function 
+
+----------------
+
+v0.1 10. August 2011
+
+#General 
++dxTuber now supports solvent files with smaler dimension than protein input files
+-new dependency python-argparse http://code.google.com/p/argparse/ (in standard libs since python 2.7)
+
+#Bugfix
+-dx2pdb files can now be imported in dxTuber_gtk
+
+#dxTuber_cmd
++Full parameter support
+-completely rewritten
+-uses python-argparse (argument parser)
+
+----------------
+
+v0.09 5. July 2011
+
+#General
++dxTuber_cmd <- first command line version of dxTuber
+ -uses standard parameters 
+  -0.005 prot min dens
+  -0.01 water min dens
+  -2D scanning
++version is now stored in ~/.dxTuber/dxTuber.conf
+  
+#writepdb
++grouped yes / no entry in PDB output header
+
+#planesearch 
+-fixed bug if constructor is  called using only necessary paramemters
+-minDiameter = 0 by default
+
+---------------
+
+v0.085 17. Mar 2011
+
+#General
+-default density water 0.01 -> 0 
+-minimum diameter for cavities during scanning 1A -> 0A
+
+#writepdb
++'CRYST1' entry to enable PBC view in VMD and other molecular viewer
+
+#Readme
++knwon bug's
+
+--------------
+
+v0.0841 14.Mar.2011
+
++'how to use dxTuber' section in README
+
+--------------
+
+v0.084 4.Mar.2011
+
+#GUI
+-changed some labels (typos)
+
+-----------------
+
+v0.083 11.Jan.2011
+
+#general 
++Gridsizes !=1 are now supported 
+
+#dx2pdb
++filter by residence probabilities stored in minSolventDensity
++settings are now stored in pdb files
+
+#pdbfiles
++reference OpenDX filename is now saved in 'OpenDXFile' (in pdb files)
+
+#README 
++tested on Ubuntu Lucid 10.4 LTS (32Bit)
+
+--------------------------
+
+v0.082 22.Sep.2010
+
+#readpdb 
++dxTuber now supports previously processed pdb files as full compatible input files
+ -only files created from version 0.082+ are supported
+ -all settings including groupes are imported and can be analyzed further 
+     
+#GUI
++new fields in file tab
+ +Min Diamemter
+ +Min Protein density
+ +Min Solvent density
+-made the code little bit 'nicer'
+
+#save to pdb
++dxTuber settings are now stored in pdb files
+ +version
+ +ProteinFile (full path)
+ +SolventFile (full path)
+ +StepSize
+ +ScanType
+ +MinDiameter
+ +MinProtDens 
+ +MinSolvDens
+ +Applied Filter (all applied; seperated by ', ')
+ 
+#filtertube
+-minor print to commandline changes 
+
+#tubeDx 
++tubeDx class has moved into lib/tubedx.py
++lots of new variables  
+ 
+#README
++minor changes
+
+-----------------
+
+v0.08 16.Sep.2010
+
+#new features
++User can adjust solvent minimum density via settings tab 
++User can define minimum cavity diameter along priciple axis (1D,2D,3D) [Angstrom]
+
+#GUI-Settings tab
++Solvent density
++Minimum diameter of the cavity
+
+#Scanning
++additional information during scanning is given
+ +Protein Threshold 
+ +Solvent Threshold 
+
+#writepdb.py
+-changed the hard coded solvent density
+
+#README
+-minor changes
+
+---------------
+
+v0.073 25.Aug.2010
+
+#general 
++README file
+ +Dependencies
+ +How to install dxTuber
+#analyseDx
+-all cavity profiles start at (choosen axis = 1)
+
+--------------
+
+v0.072 20.May.2010
+
+#general
++New filter 'Filter by Distance' implemented
+-Fixed warnings in analysePopupWindow
+ -<requires-version lib="gtk+" version="2.12"/>  removed
+ -<requires-version lib="bonobo" version="0.0"/> removed
+ -<requires-version lib="gnome" version="0.0"/>  removed
+ 
+#GUI-Settings tab
+-Filter by plane -> Filter by Distance
++SpinBox 'minimum Distance' in [A]
+
+#filterDx
+-Filter by Distance: 2D filtering modified to 3D filtering
+
+--------------
+
+v0.071 17.May.2010	
+
+#general
+-Modified script description header (hasn't been modified since dxTuber v0.001!)
+-Fixed warnings in startup of dxTuber, some deprecated stuff from glade3 were modified in dxTuber.libglade
+ -<requires-version lib="gtk+" version="2.12"/>  removed
+ -<requires-version lib="bonobo" version="0.0"/> removed
+ -<requires-version lib="gnome" version="0.0"/>  removed
+ -modified neighborspinbox initialization
+  -<property name="adjustment">10 1 25 1 10 10</property> -> <property name="adjustment">10 1 25 1 10 0</property>
+ 
+#GUI
+-For 1D scanning all xyz axis are active per default now. 
+-Renamed two buttons
+ -Analyse Tube -> Analyze
+ -Filter Tuber -> Filter
+
+---------------
+
+v0.07 14.Apr.2010
+
+#new features
++fill tubes after grouping (2D & 3D)
+
+#general
+-tubeVoxelGroupGrid [x][y][z] = group1 group2 group3   
+ -this effects analyseTube fillTube. 
+ -More than one group is stored here seperated by blanks as string 
+ -Overlapping cavities are possible and still selectable via name (PDB)
+ 
+#scanning
+-user gets a print on console which scan method is currently running
+
+#GUI
++Added checkbox for fill Tubes
+
+#CMD
++Print scanning method while scanning
+
+-----------
+
+v0.067 3.Mar.2010
+
+#GUI
+-after opening/saving/scanning 'Files'-Tab will be on focus
+-after analysing cavities along princeple axis 'Analyse Tube' window will close
+
+#Scantube
+-notification when scanning is "Done" 
+
+#grouptube
+-print progress while grouping, in percentage
+
+#writedx
+-notification when saving is "Done"
+
+#writepdb
++added "TER" + "END" in tail of PDB files
+
+
