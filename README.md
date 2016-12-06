@@ -102,7 +102,7 @@ as atom name in the exported PDB file.
 - Nadine Fischer 			Bugtesting
 - Thomas H. Schmidt		Bugtesting, Typos ;)
 
-## Extranal:
+## External:
 - Mattia Sturlese			Bugreport
 
 
