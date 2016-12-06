@@ -1,4 +1,4 @@
-= dxTuber =
+#dxTuber
 
 dxTuber is the first cavity detection tool that takes into account protein and cavity dynamics 
 using solvent and protein residence probabilities derived from molecular dynamics (MD) simulations. 
@@ -15,7 +15,7 @@ Based on this data cavity statistics can be obtained easily.
 dxTuber is licensed under the GPLv2 (-> gpl2-2.0.txt)
 
 
-= Dependencies =
+#Dependencies 
 
 - GTK+ / Bonobo
 - Python 2.5 and 2.6 are tested (please mail me if you tested other versions successfull ;)
@@ -26,7 +26,7 @@ dxTuber is licensed under the GPLv2 (-> gpl2-2.0.txt)
   - Required for cmd version 
   
     
-= Installation = 
+#Installation 
 
 1. extract and copy all files in a directory you like 
    (e.g. /opt/dxTuber)
@@ -44,7 +44,7 @@ dxTuber is licensed under the GPLv2 (-> gpl2-2.0.txt)
 6. start dxTuber_gtk.py 
 
 
-= How to use dxTuber = 
+#How to use dxTuber 
 
 The program is started from the console by typing dxTuber_gtk.py. 
 While the dxTuber is driven by a graphical user interface, general status messages 
@@ -64,14 +64,14 @@ specified which is done based on each cavity's unique denomination that is encod
 as atom name in the exported PDB file. 
 
 
-= Tested on =
+#Tested on 
 
 Suse Linux 10.3 Enterprise / 11 (32 Bit)
 openSuse 11.3 (32 Bit)
 Ubuntu 10.4 LTS (32 Bit)
+Debian 8 (64 Bit)
 
-
-= Known Bugs / Issues = 
+#Known Bugs / Issues 
 
 - Compiz can disturb the dxTuber widget so that the main window title is not shown. 
 -> Disable Compiz
@@ -89,22 +89,21 @@ Ubuntu 10.4 LTS (32 Bit)
 -> use the command line version of dxTuber
 
 
-= Acknowledgements =
+#Acknowledgements 
 
-### Research lab: Computational Structural Biology @ University of Bonn: ###
+## Research lab: Computational Structural Biology @ University of Bonn: 
 
 Christian Kandt			Supervising, Bugtesting
 Nadine Fischer 			Bugtesting
 Thomas H. Schmidt		Bugtesting, Typos ;)
 
-### Extranal:
+## Extranal:
 Mattia Sturlese			Bugreport
 
 
-= Developed by =
+#Developed by 
 
 Martin Raunest 
 Contact
-e-mail: raunest@bit.uni-bonn.de or m.raunest@gmx.de
-xmpp: raunest@jabber.org
-
+e-mail: m.raunest@gmx.de
+xmpp: raunest@jabber.org 
