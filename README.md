@@ -66,10 +66,12 @@ as atom name in the exported PDB file.
 
 #Tested on 
 
-Suse Linux 10.3 Enterprise / 11 (32 Bit)
-openSuse 11.3 (32 Bit)
-Ubuntu 10.4 LTS (32 Bit)
-Debian 8 (64 Bit)
+- Suse Linux 10.3 Enterprise / 11 (32 Bit)
+- openSuse 11.3 (32 Bit)
+- Ubuntu 10.4 LTS (32 Bit)
+- Fefora 19
+- Fedora 20
+- Debian 8 (64 Bit)
 
 #Known Bugs / Issues 
 
