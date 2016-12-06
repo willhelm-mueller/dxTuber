@@ -69,7 +69,7 @@ as atom name in the exported PDB file.
 - Suse Linux 10.3 Enterprise / 11 
 - openSuse 11.3 
 - Ubuntu 10.4 LTS 
-- Fefora 19
+- Fedora 19
 - Fedora 20
 - Debian 8 
 - MacOS (command line)
