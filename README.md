@@ -66,14 +66,17 @@ as atom name in the exported PDB file.
 
 #Tested on 
 
-- Suse Linux 10.3 Enterprise / 11 (32 Bit)
-- openSuse 11.3 (32 Bit)
-- Ubuntu 10.4 LTS (32 Bit)
+- Suse Linux 10.3 Enterprise / 11 
+- openSuse 11.3 
+- Ubuntu 10.4 LTS 
 - Fefora 19
 - Fedora 20
-- Debian 8 (64 Bit)
+- Debian 8 
+- MacOS (command line)
 
 #Known Bugs / Issues 
+
+- GUI does not work (well it depends on gtk2, ... -> use dxTuber_cmd.py instead
 
 - Compiz can disturb the dxTuber widget so that the main window title is not shown. 
 -> Disable Compiz
@@ -95,17 +98,16 @@ as atom name in the exported PDB file.
 
 ## Research lab: Computational Structural Biology @ University of Bonn: 
 
-Christian Kandt			Supervising, Bugtesting
-Nadine Fischer 			Bugtesting
-Thomas H. Schmidt		Bugtesting, Typos ;)
+- Christian Kandt			Supervising, Bugtesting
+- Nadine Fischer 			Bugtesting
+- Thomas H. Schmidt		Bugtesting, Typos ;)
 
 ## Extranal:
-Mattia Sturlese			Bugreport
+- Mattia Sturlese			Bugreport
 
 
-#Developed by 
 
-Martin Raunest 
-Contact
-e-mail: m.raunest@gmx.de
-xmpp: raunest@jabber.org 
+
+#Contact
+- e-mail: m.raunest@gmx.de
+- xmpp: raunest@jabber.org 
